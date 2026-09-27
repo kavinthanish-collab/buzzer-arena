@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
-const socket = io("https://buzzer-arena.onrender.com");
+const socket = io("https://buzzer-arena-1.onrender.com");
 
 // =========================
 // ICONS
