@@ -894,7 +894,7 @@ svg {
   display: grid;
 
   grid-template-rows:
-    55px auto 67px 1fr;
+    55px auto auto 1fr;
 
   gap: 9px;
 }
@@ -1144,15 +1144,17 @@ svg {
 /* CODE */
 
 .code-card {
-  min-height: 67px;
+  min-height: 80px;
+  max-height: 120px;
+  height: 96px;
 
-  padding: 8px 15px;
+  padding: 12px 18px;
 
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 
-  border-radius: 15px;
+  border-radius: 14px;
 
   background:
     linear-gradient(135deg,
@@ -1160,11 +1162,12 @@ svg {
       rgba(20, 15, 31, 0.96));
 
   border: 1px solid rgba(157, 119, 255, 0.16);
+  box-sizing: border-box;
 }
 
 .code-icon {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
 
   flex-shrink: 0;
 
@@ -1174,33 +1177,44 @@ svg {
 
   color: #c49eff;
 
-  background: rgba(124, 60, 255, 0.12);
+  background: rgba(124, 60, 255, 0.14);
 
-  border-radius: 9px;
+  border-radius: 10px;
 }
 
 .code-icon svg {
-  width: 18px;
+  width: 20px;
+  height: 20px;
+}
+
+.code-details,
+.code-card > div:not(.code-icon):not(.game-status) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .code-card span {
   display: block;
 
-  color: #777083;
+  color: #8e879f;
 
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 1.2px;
+  line-height: 1.2;
 }
 
 .code-card strong {
   display: block;
 
-  margin-top: 1px;
+  margin-top: 2px;
 
   color: white;
 
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.1;
 
   letter-spacing: 3px;
 }
@@ -1210,12 +1224,25 @@ svg {
 
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 
-  color: #65dda7;
+  color: #53dda0;
 
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.game-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #53dda0;
+
+  box-shadow: 0 0 8px #53dda0;
+  flex-shrink: 0;
 }
 
 /* ADMIN GRID */
@@ -1572,7 +1599,7 @@ svg {
 
   .admin-container {
     grid-template-rows:
-      50px auto 60px 1fr;
+      50px auto auto 1fr;
   }
 
   .admin-topbar {
@@ -1584,7 +1611,8 @@ svg {
   }
 
   .code-card {
-    min-height: 60px;
+    min-height: 80px;
+    height: 90px;
   }
 
   .admin-panel {
@@ -1749,6 +1777,6 @@ svg {
   }
 
   .game-status {
-    display: none;
+    font-size: 9px;
   }
 }

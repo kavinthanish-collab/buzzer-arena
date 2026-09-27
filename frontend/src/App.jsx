@@ -928,7 +928,7 @@ function App() {
               <KeyIcon />
             </div>
 
-            <div>
+            <div className="code-details">
               <span>
                 CURRENT GAME CODE
               </span>
